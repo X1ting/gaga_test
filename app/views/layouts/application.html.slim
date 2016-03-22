@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title GagaTest
+    meta name='viewport' content='width=device-width, initial-scale=1'
+    = stylesheet_link_tag    'application', media: 'all'
+    = csrf_meta_tags
+
+  body
+    .container
+      nav.navbar class='navbar-inverse'
+        .navbar-header
+          = link_to 'GagaTest', '/', class: 'navbar-brand'
+          = link_to 'Create', '/card', class: 'navbar-brand'
+      ==yield
+    = javascript_include_tag 'application'
+
