@@ -1,0 +1,17 @@
+br
+.panel class='panel-default'
+  .panel-heading
+    =event.name
+  .panel-body
+    time.start datetime=event.start_at
+      =event.start_at.to_s
+      '
+      ' &ndash;
+    time.end datetime=event.end_at
+      =event.end_at.to_s
+    address
+      =event.address
+    .panel-footer
+      -event.games.each do |game|
+        span.label class='label-primary' =game.name
+        '
