@@ -12,6 +12,8 @@ gem 'roar'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
 end
+gem 'geocoder'
+gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'
