@@ -5,25 +5,25 @@
     .form-group
       .label class="col-sm-3" Hours:
       .col-sm-2
-        = number_field_tag 'between_time[begins]', nil, in: 0..24, class: 'form-control'
+        = number_field_tag 'filter[between_time[start_at]]', nil, in: 0..24, class: 'form-control'
       .col-sm-2
-        = number_field_tag 'between_time[ends]', nil, in: 0..24, class: 'form-control'
+        = number_field_tag 'filter[between_time[end_at]]', nil, in: 0..24, class: 'form-control'
 
     .form-group
       .label class="col-sm-3" Distance, km:
       .col-sm-4
-        = number_field_tag 'in_distance[distance]', nil, class: 'form-control'
-        = hidden_field_tag 'in_distance[client_latitude]', nil, class: 'form-control'
-        = hidden_field_tag 'in_distance[client_longitude]', nil, class: 'form-control'
+        = number_field_tag 'filter[in_distance[distance]]', nil, class: 'form-control'
+        = hidden_field_tag 'filter[in_distance[client_latitude]]', nil, class: 'form-control'
+        = hidden_field_tag 'filter[in_distance[client_longitude]]', nil, class: 'form-control'
 
     .form-group
       .label class="col-sm-3" Day of week:
       .col-sm-4
-        = select_tag 'day_of_start[day]', options_for_select(day_select), include_blank: true, class: 'form-control'
+        = select_tag 'filter[day_of_start[day]]', options_for_select(day_select), include_blank: true, class: 'form-control'
 
     .form-group
       .label class="col-sm-3" With games:
       .col-sm-4
-        =select_tag 'has_games[game_ids][]', options_for_select(game_select(@games)), multiple: true, class: 'form-control', id: 'has_games_game_ids'
+        =select_tag 'filter[with_games[game_ids]][]', options_for_select(game_select), multiple: true, class: 'form-control', id: 'filter_with_games_game_ids'
 
-    = submit_tag 'Search', class: 'btn btn-primary btn-block'
+    = submit_tag 'Search', class: 'btn btn-primary btn-block btn-medium'

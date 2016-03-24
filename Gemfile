@@ -8,16 +8,17 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'slim'
-gem 'roar'
+gem 'jbuilder'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
 end
 gem 'geocoder'
 gem 'faker'
+gem 'pry', group: :development
 
-group :development, :test do
+group :test do
   gem 'rspec-rails'
+  gem "nyan-cat-formatter"
   gem 'factory_girl_rails'
-  gem 'pry'
 end
 

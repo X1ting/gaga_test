@@ -3,12 +3,12 @@ br
   .panel-heading
     =event.name
   .panel-body
-    time.start datetime=event.start_at
-      =event.start_at.to_s
+    time.start
+      =event.start_at.to_formatted_s :long
       '
       ' &ndash;
-    time.end datetime=event.end_at
-      =event.end_at.to_s
+    time.end
+      =event.end_at.to_formatted_s :long
     address
       =event.address
     .panel-footer
