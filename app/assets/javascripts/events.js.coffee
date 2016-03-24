@@ -8,7 +8,6 @@ $ ->
 
   # Actions
   $('#search').submit( (event) ->
-    console.log($(this).serialize())
     event.preventDefault()
     $.ajax({
       dataType: "json",

@@ -12,6 +12,8 @@ br
     address
       =event.address
     .panel-footer
+      span Games:
       -event.games.each do |game|
-        span.label class='label-primary' =game.name
-        '
+        div
+          span.label class='label-info' =game.name
+          '
