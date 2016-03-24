@@ -3,8 +3,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-<tt>git clone</tt>
-<tt>bundle install</tt>
-<tt>change database.yml</tt>
-<tt>rake db:create db:migrate db:seed</tt>
-<tt>rails server</tt>
+* <tt>git clone</tt>
+* <tt>bundle install</tt>
+* <tt>change database.yml</tt>
+* <tt>rake db:create db:migrate db:seed</tt>
+* <tt>rails server</tt>
